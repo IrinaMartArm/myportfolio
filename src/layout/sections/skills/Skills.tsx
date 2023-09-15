@@ -20,5 +20,4 @@ const StyledSkills = styled.section`
    flex-direction: column;
    text-align: center;
    min-height: 100vh;
-   background-color: #e9f5cb;
 `
