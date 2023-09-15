@@ -7,7 +7,7 @@ export const Main = () => {
         <StyledMain>
             <Wrapper align='center' justify='space-around'>
                 <div>
-                    <span>Hi, my name is Irina </span>
+                    <Hello>Hi, my name is Irina </Hello>
                     <MainTitle>a web developer. </MainTitle>
                     <span>with passion for learning and creating.</span>
                 </div>
