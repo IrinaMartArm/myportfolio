@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -22,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
 
     a, a:link, a:visited  {
         text-decoration: none;
+        cursor: pointer;
+        color: ${Theme.colors.white};
     }
 
     a:hover  {
@@ -39,10 +42,22 @@ export const GlobalStyle = createGlobalStyle`
     background: none;
     border: none;
     cursor: pointer;
-}
+    }
 
     input:focus, input:active,
     button:focus, button:active {
         outline: none;
     }
+
+    section {
+        padding: 100px 0;
+    }
+
+    section:nth-of-type(odd) {
+        background-color: ${Theme.colors.primary}
+    }
+    section:nth-of-type(even) {
+        background-color: ${Theme.colors.secondary}
+    }
+
 `

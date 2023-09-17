@@ -19,21 +19,26 @@ export const Work = (props:  WorkPropsType) => {
 }
  
 const StyledWork = styled.div`
-    width: 40%;
+    width: 45%;
 
 `
     
 const Image = styled.img`
     width: 100%;
-    height: 260px;
+    /* height: 260px; */
     object-fit: cover;
 `
 
 const StyledTitle = styled.h4`
-    
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
 `
 const Text = styled.p`
-    
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
 `
 const Link = styled.a`
     
