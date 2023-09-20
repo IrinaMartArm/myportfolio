@@ -15,7 +15,7 @@ export const Works = () => {
                 <Title>My Works </Title>
                 <Menu items={worksitems}/>
                 <Wrapper justify="space-around">
-                    <Work title="Social Network" text="jdhfgrtrgg" image={network}/>
+                    <Work title="Social Network" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit." image={network}/>
                     <Work title="Adaptive Landings" text="jdhfgrtrgg" image={network}/>
                 </Wrapper>
             </Container>

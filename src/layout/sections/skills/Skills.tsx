@@ -20,7 +20,7 @@ export  const Skills = () => {
                     <Skill iconId={"react2"} title={'React Native'}/>
                     <Skill iconId={"sass"} title={'Sass'}/>
                     <Skill iconId={"redux"} title={'Redux'}/>
-                    <Skill iconId={"gt"} title={'Redux'}/>
+                    <Skill iconId={"git"} title={'Git'}/>
                     <Skill iconId={"styled-components"} title={'StyledComponents'}/>
                 </Wrapper>
             </Container>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Theme } from "../../../style/Theme";
 
 type WorkPropsType = {
     image: string
@@ -9,18 +10,47 @@ type WorkPropsType = {
 export const Work = (props:  WorkPropsType) => {
     return (  
         <StyledWork>
-            <Image src={props.image} alt="" />
-            <StyledTitle>{props.title}</StyledTitle>
-            <Text>{props.text}</Text>
-            <Link href="">Demo</Link>
-            <Link href="">Code</Link>
+            <ImgBox>
+                <Image src={props.image}/>
+            </ImgBox>
+            <Box>
+                <StyledTitle>{props.title}</StyledTitle>
+                <Text>{props.text}</Text>
+            </Box>            
         </StyledWork>
     );
 }
  
-const StyledWork = styled.div`
-    width: 45%;
+const StyledWork = styled.a`
+    width: 45%;    
+    border: 1px solid ${Theme.colors.border}; 
+    position: relative;
+    transition: 0.2s ease-in;
 
+    &:hover {
+        outline: 2px solid ${Theme.colors.accent};
+        transform: scale(1.02);
+        
+        &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.10);        
+        }
+    }
+    &:active {
+        
+    }
+`
+const Box = styled.div`
+    padding: 25px 20px;
+    text-align: start;
+`
+const ImgBox = styled.div`    
+    background-color: rgba(0, 0, 0, 0.20);  
 `
     
 const Image = styled.img`
@@ -35,11 +65,7 @@ const StyledTitle = styled.h4`
     font-weight: 700;
     letter-spacing: 1px;
 `
+
 const Text = styled.p`
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 400;
-`
-const Link = styled.a`
-    
+    margin: 5px 0 20px;
 `

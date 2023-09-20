@@ -19,7 +19,7 @@ export const Skill = (props: SkillPropsType) => {
 }
  
 const StyledSkill = styled.div`
-    width: 200px;
+    width: 13%;
     text-align: center;
 `
 const StyledTitle = styled.h3`

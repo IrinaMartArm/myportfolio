@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     button, input[type="submit"] {
-    display: inline-block;
+    /* display: inline-block; */
     box-shadow: none;
     background-color: transparent;
     background: none;
@@ -59,5 +59,11 @@ export const GlobalStyle = createGlobalStyle`
     section:nth-of-type(even) {
         background-color: ${Theme.colors.secondary}
     }
-
+    
+    p {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
 `

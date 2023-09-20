@@ -3,6 +3,7 @@ import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { Wrapper } from "../../components/wrapper/Wrapper";
 import { HeaderMenu } from "./HeaderMenu";
+import { MobileMenu } from "./MobileMenu";
 
 const menuItems = ['Home', 'Works', 'Contacts', 'Skills']
 
@@ -11,9 +12,9 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <Wrapper justify="space-between" align="center">
-                    {/* <span>IRINA</span> */}
                     <Logo/>
                     <HeaderMenu items={menuItems}/>
+                    <MobileMenu items={menuItems}/>
                 </Wrapper>                
             </Container>
         </StyledHeader>

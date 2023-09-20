@@ -69,8 +69,8 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: ${Theme.colors.accent};
+
   &:hover {
     color: ${Theme.colors.white};
     transform: translateY(-4px);
