@@ -5,6 +5,7 @@ import { Wrapper } from "../../../components/wrapper/Wrapper";
 type SkillPropsType = {
     iconId: string
     title: string
+    width?: string
 }
 
 export const Skill = (props: SkillPropsType) => {
@@ -19,8 +20,10 @@ export const Skill = (props: SkillPropsType) => {
 }
  
 const StyledSkill = styled.div`
-    width: 13%;
+    width: 150px;
     text-align: center;
+    flex-grow: 1;
+    padding: 5px 0 10px;
 `
 const StyledTitle = styled.h3`
     

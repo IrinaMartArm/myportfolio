@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Wrapper direction="column" align="center">
-        <Logo />
+        <Logo/>
         <SocialList>
           <SocialItem>
             <SocialLink>
@@ -50,13 +50,13 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: ${Theme.colors.secondary};
-  padding: 40px 0;
+  padding: 30px 0;
 `;
 
 const SocialList = styled.ul`
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
 `;
 
 const SocialItem = styled.li``;

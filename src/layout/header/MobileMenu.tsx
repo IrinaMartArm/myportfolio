@@ -4,10 +4,10 @@ import { Theme } from "../../style/Theme";
 export const MobileMenu = (props: {items: Array<string>}) => {
     return ( 
         <StyledMobileMenu>
-            <StyledButton isOpen={true}>
+            <StyledButton isOpen={false}>
                 <span></span>
             </StyledButton>
-            <MenuWrapper isOpen={true}>
+            <MenuWrapper isOpen={false}>
                 <ul>
                     {props.items.map((i, index)=>{
                         return  <MenuItem key={index}>
@@ -117,7 +117,7 @@ const StyledButton = styled.button<{isOpen: boolean}>`
     position: fixed;
     width: 200px;
     height: 200px;
-    top: -100px;
+    top: -110px;
     right: -100px;
     z-index: 9999;
 

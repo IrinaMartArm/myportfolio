@@ -10,7 +10,7 @@ export  const Skills = () => {
             <Container>
                 <Title>My Skills</Title>
                 <Wrapper wrap="wrap" gap="30px" justify="space-between">
-                    <Skill iconId={"figma"} title={'Figma'}/>
+                    <Skill iconId={"figma"} title={'Figma'} width="80px"/>
                     <Skill iconId={"css"} title={' CSS3'}/>
                     <Skill iconId={"html"} title={'HTML5'}/>
                     <Skill iconId={"vscode"} title={'VScode'}/>
@@ -29,7 +29,7 @@ export  const Skills = () => {
 }
  
 const StyledSkills = styled.section`
-   display: flex;
-   flex-direction: column;
-   text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 `
