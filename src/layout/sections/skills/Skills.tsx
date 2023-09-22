@@ -1,35 +1,38 @@
-import styled from "styled-components";
-import { Title } from "../../../components/title/Title";
-import { Wrapper } from "../../../components/wrapper/Wrapper";
-import { Skill } from "./Skill"
+import React from "react";
+import { S } from "./SkillsStyles";
+import { Title } from "../../../components/Title";
+import { Wrapper } from "../../../components/Wrapper";
+import { Skill } from "./Skill";
 import { Container } from "../../../components/Container";
 
-export  const Skills = () => {
-    return ( 
-        <StyledSkills>
-            <Container>
-                <Title>My Skills</Title>
-                <Wrapper wrap="wrap" gap="30px" justify="space-between">
-                    <Skill iconId={"figma"} title={'Figma'} width="80px"/>
-                    <Skill iconId={"css"} title={' CSS3'}/>
-                    <Skill iconId={"html"} title={'HTML5'}/>
-                    <Skill iconId={"vscode"} title={'VScode'}/>
-                    <Skill iconId={"JS"} title={'JavaScript'}/>
-                    <Skill iconId={"TS"} title={'TypeScript'}/>
-                    <Skill iconId={"react"} title={'React'}/>
-                    <Skill iconId={"react2"} title={'React Native'}/>
-                    <Skill iconId={"sass"} title={'Sass'}/>
-                    <Skill iconId={"redux"} title={'Redux'}/>
-                    <Skill iconId={"git"} title={'Git'}/>
-                    <Skill iconId={"styled-components"} title={'StyledComponents'}/>
-                </Wrapper>
-            </Container>
-        </StyledSkills>
-    );
-}
- 
-const StyledSkills = styled.section`
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-`
+const skillsData = [
+  { iconId: "figma", title: "Figma" },
+  { iconId: "css", title: "CSS3" },
+  { iconId: "html", title: "HTML5" },
+  { iconId: "vscode", title: "VScode" },
+  { iconId: "JS", title: "JavaScript" },
+  { iconId: "TS", title: "TypeScript" },
+  { iconId: "react", title: "React" },
+  { iconId: "react2", title: "React Native" },
+  { iconId: "sass", title: "Sass" },
+  { iconId: "redux", title: "Redux" },
+  { iconId: "git", title: "Git" },
+  { iconId: "styled-components", title: "StyledComponents" },
+];
+
+export const Skills: React.FC = () => {
+  return (
+    <S.Skills>
+      <Container>
+        <Title>My Skills</Title>
+        <Wrapper wrap="wrap" gap="30px" justify="space-between">
+          {skillsData.map((skill, index) => {
+            return (
+              <Skill key={index} iconId={skill.iconId} title={skill.title} />
+            );
+          })}
+        </Wrapper>
+      </Container>
+    </S.Skills>
+  );
+};

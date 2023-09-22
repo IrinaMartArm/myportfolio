@@ -1,37 +1,21 @@
-import styled from "styled-components";
-import { Wrapper } from "../wrapper/Wrapper";
+import React from "react";
+import { Wrapper } from "../Wrapper";
+import { S } from "./SliderStyle";
 
-export const Slider = () => {
-    return (  
-        <StyledSlider>
-           <Wrapper>
-            <Slide>
-                    <Text></Text>
+export const Slider: React.FC = () => {
+  return (
+    <S.Slider>
+      <Wrapper>
+        <S.Slide>
+          <S.Text></S.Text>
+        </S.Slide>
+      </Wrapper>
+      <S.Pagination>
+        <span></span>
+        <span></span>
+        <span></span>
+      </S.Pagination>
+    </S.Slider>
+  );
+};
 
-                </Slide>
-           </Wrapper>
-           <Pagination>
-                <span></span>
-                <span></span>
-                <span></span>
-           </Pagination>
-        </StyledSlider>
-    );
-}
- 
-const StyledSlider = styled.div`
-    min-height: 100vh;
-`
-
-const Slide = styled.div`
-    max-width: 500px;
-`
-
-const Text = styled.p`
-    
-`
-const Pagination = styled.span`
-    span {
-        
-    }
-`

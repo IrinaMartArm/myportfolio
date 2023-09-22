@@ -1,30 +1,20 @@
-import styled from "styled-components";
 import { Icon } from "../../../components/icon/Icon";
-import { Wrapper } from "../../../components/wrapper/Wrapper";
+import { Wrapper } from "../../../components/Wrapper";
+import { S } from "./SkillsStyles";
 
 type SkillPropsType = {
-    iconId: string
-    title: string
-    width?: string
-}
+    iconId: string;
+    title: string;
+    width?: string;
+};
 
 export const Skill = (props: SkillPropsType) => {
-    return (  
-        <StyledSkill>
-            <Wrapper direction="column" align="center" gap="15px">
-                <Icon width="120px" height="120px" iconId={props.iconId}/>
-                <StyledTitle>{props.title}</StyledTitle>
-            </Wrapper>          
-        </StyledSkill>
+    return (
+        <S.Skill>
+        <Wrapper direction="column" align="center" gap="15px">
+            <Icon width="120px" height="120px" iconId={props.iconId} />
+            <S.Title>{props.title}</S.Title>
+        </Wrapper>
+        </S.Skill>
     );
-}
- 
-const StyledSkill = styled.div`
-    width: 150px;
-    text-align: center;
-    flex-grow: 1;
-    padding: 5px 0 10px;
-`
-const StyledTitle = styled.h3`
-    
-`
+};

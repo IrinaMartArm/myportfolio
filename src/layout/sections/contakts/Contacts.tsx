@@ -1,63 +1,33 @@
-import styled from "styled-components";
-import { Wrapper } from "../../../components/wrapper/Wrapper";
-import { Title } from "../../../components/title/Title";
-import { Button } from "../../../components/button/Button";
+import { Wrapper } from "../../../components/Wrapper";
+import { Title } from "../../../components/Title";
+import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
-import { Theme } from "../../../style/Theme";
+import { S } from "./ContactsStyle";
+import React from "react";
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
-    <StyledContacts>
+    <S.Contacts>
       <Container>
         <Wrapper direction="column" align="center">
           <Title>Contact me</Title>
-          <StyledForm>
+          <S.Form>
             <label>
               Name
-              <Field />
+              <S.Field />
             </label>
             <label>
               Email
-              <Field />
+              <S.Field />
             </label>
             <label>
               Message
-              <Field as={"textarea"} />
+              <S.Field as={"textarea"} />
             </label>
             <Button type="submit">Send</Button>
-          </StyledForm>
+          </S.Form>
         </Wrapper>
       </Container>
-    </StyledContacts>
+    </S.Contacts>
   );
 };
-
-const StyledContacts = styled.section``;
-const StyledForm = styled.form`
-  max-width: 540px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  textarea {
-    resize: none;
-    height: 120px;
-  }
-`;
-const Field = styled.input`
-  max-width: 540px;
-  width: 100%;
-  border: 1px solid #4a4a4a;
-  background-color: ${Theme.colors.primary};
-  padding: 7px 15px;
-
-  color: ${Theme.colors.white};
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.6px;
-
-  &:focus-visible {
-    outline: 1.5px solid ${Theme.colors.border};
-  }
-`;

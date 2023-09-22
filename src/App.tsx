@@ -11,13 +11,13 @@ import { Works } from './layout/sections/works/Works';
 function App() {
     return (
         <div className="App">
-           <Header/>
-           <Main/>
-           <Skills/>
-           <Works/>
-           <Slogan/>
-           <Contacts/>
-           <Footer/>
+            <Header/>
+            <Main/>
+            <Skills/>
+            <Works/>
+            <Slogan/>
+            <Contacts/>
+            <Footer/>
         </div>
     );
 }
