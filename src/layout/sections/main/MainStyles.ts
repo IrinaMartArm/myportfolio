@@ -31,7 +31,7 @@ const MainTitle = styled.h1`
             display: inline-block;
             position: absolute;
             width: 90%;
-            height: 15px;
+            height: 7px;
             left: 50px;
             bottom: 10px;
             z-index: -1;

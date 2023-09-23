@@ -7,7 +7,7 @@ import React from "react";
 
 export const Contacts: React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id="contact">
       <Container>
         <Wrapper direction="column" align="center">
           <Title>Contact me</Title>

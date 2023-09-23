@@ -1,14 +1,12 @@
 import styled, { css } from "styled-components";
 import { Theme } from "../../../style/Theme";
+import { Link } from "react-scroll";
 
-const Link = styled.a`
-    text-align: center;
-    font-family: Kalam;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: transparent;
+
+const MenuItem = styled.li`
+    position: relative;
 `;
+
 const Mask = styled.span`
     position: absolute;
     top: 0;
@@ -26,8 +24,14 @@ const Mask = styled.span`
         }
     }
 `;
-const MenuItem = styled.li`
-    position: relative;
+
+const NavLinks = styled(Link)`
+    text-align: center;
+    font-family: Kalam;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: transparent;
 
     &::before {
         content: "";
@@ -41,8 +45,7 @@ const MenuItem = styled.li`
         z-index: 2;
         transform: scale(0);
     }
-
-    &:hover {
+    &:hover, &.active {
         &::before {
         transform: scale(1);
         }
@@ -57,14 +60,15 @@ const MenuItem = styled.li`
     }
 `;
 
-const StyledDesktopMenu = styled.nav`
+
+const DesktopMenu = styled.nav`
     ul {
         display: flex;
         gap: 40px;
         justify-content: center;
     }
 `;
-const StyledMobileMenu = styled.nav``;
+const MobileMenu = styled.nav``;
 const MenuWrapper = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
@@ -87,10 +91,11 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
         display: flex;
         gap: 40px;
         flex-direction: column;
+        align-items: center;
     }
 `;
 
-const StyledButton = styled.button<{ isOpen: boolean }>`
+const Button = styled.button<{ isOpen: boolean }>`
     position: fixed;
     width: 200px;
     height: 200px;
@@ -149,11 +154,11 @@ const StyledButton = styled.button<{ isOpen: boolean }>`
 
 
 export const S = {
-    Link, 
+    NavLinks, 
     MenuItem, 
     Mask, 
-    StyledDesktopMenu,  
-    StyledMobileMenu,  
+    DesktopMenu,  
+    MobileMenu,  
     MenuWrapper, 
-    StyledButton
+    Button
 }

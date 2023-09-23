@@ -6,7 +6,7 @@ import { Wrapper } from "../../components/Wrapper";
 import { DesktopMenu } from "./headerMenu/HeaderMenu";
 import { MobileMenu } from "./headerMenu/MobileMenu";
 
-const menuItems = ["Home", "Works", "Contacts", "Skills"];
+
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -24,9 +24,9 @@ export const Header: React.FC = () => {
         <Wrapper justify="space-between" align="center">
           <Logo />
           {width < breakpoint ? (
-            <MobileMenu items={menuItems} />
+            <MobileMenu/>
           ) : (
-            <DesktopMenu items={menuItems} />
+            <DesktopMenu/>
           )}
         </Wrapper>
       </Container>

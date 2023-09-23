@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Theme } from "../../../style/Theme";
 
 
 const Works = styled.section`
+    position: relative;
     text-align: center;    
 `
 const Work = styled.a`
@@ -73,7 +74,7 @@ const ListItem = styled.li`
     color: ${Theme.colors.accent};
 `;
 
-const Link = styled.a`
+const Link = styled.a<{active: boolean}>`
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -97,6 +98,10 @@ const Link = styled.a`
         bottom: 15px;
         background-color: ${Theme.colors.accent};
         z-index: -1;
+
+        ${props => props.active && css<{active: boolean}>`
+        height: 5px;
+        `}
     }
 `;
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const Skills = styled.section`
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;

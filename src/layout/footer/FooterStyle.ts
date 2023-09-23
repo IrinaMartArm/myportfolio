@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Theme } from "../../style/Theme";
 
 const Footer = styled.footer`
+  position: relative;
   background-color: ${Theme.colors.secondary};
   padding: 30px 0;
 `;

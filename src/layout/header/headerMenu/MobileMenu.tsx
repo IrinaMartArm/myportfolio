@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu } from "./Menu";
-import { S } from "./HeadeMenuStyle";
+import { S } from "./HeaderMenuStyle";
 
-export const MobileMenu: React.FC<{ items: Array<string> }> = (props: {
-  items: Array<string>;
-}) => {
+export const MobileMenu: React.FC = () => {
+  const [menuIsOpen, setmenuIsOpen] = useState(false);
+  const onBtnClick = () => {
+    setmenuIsOpen(!menuIsOpen);
+  };
+
   return (
-    <S.StyledMobileMenu>
-      <S.StyledButton isOpen={false}>
+    <S.MobileMenu>
+      <S.Button isOpen={menuIsOpen} onClick={onBtnClick}>
         <span></span>
-      </S.StyledButton>
-      <S.MenuWrapper isOpen={false}>
-        <Menu items={props.items} />
+      </S.Button>
+      <S.MenuWrapper isOpen={menuIsOpen}>
+        <Menu />
       </S.MenuWrapper>
-    </S.StyledMobileMenu>
+    </S.MobileMenu>
   );
 };
