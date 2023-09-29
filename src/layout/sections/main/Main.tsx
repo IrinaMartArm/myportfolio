@@ -1,5 +1,5 @@
 import React from "react";
-import myPhoto from "./../../../assets/images/pictures/ira.webp";
+import myPhoto from "./../../../assets/images/pictures/551B5255-A6D0-4CA2-BFEB-984FED02BD01-_1_-2.webp";
 import { Wrapper } from "../../../components/Wrapper";
 import { Container } from "../../../components/Container";
 import { S } from "./MainStyles";
@@ -17,7 +17,7 @@ export const Main: React.FC = () => {
               Hi, <span>my name is Irina</span>
             </S.Hello>
             <S.MainTitle>
-              a <span>frontend developer</span>
+              a <span>Web developer</span>
             </S.MainTitle>
             <S.Text>
               <Typewriter options={{
@@ -31,7 +31,7 @@ export const Main: React.FC = () => {
           </div>
           <Tilt className="parallax-effect" perspective={500}>
             <S.PhotoFrame>
-              <S.Photo src={myPhoto} />
+              <S.Photo src={myPhoto} alt="photo"/>
             </S.PhotoFrame>
           </Tilt>
         </Wrapper>

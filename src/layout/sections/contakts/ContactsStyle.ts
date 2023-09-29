@@ -13,26 +13,22 @@ const Form = styled.form`
     textarea {
         resize: none;
         height: 120px;
+        &:focus-visible {
+            outline: 1px solid ${Theme.colors.border};
+        }
     }
 `;
 const Field = styled.input`
     max-width: 540px;
     width: 100%;
-    border: 1px solid #4a4a4a;
+    border: 1px solid #4A4A4A;
     background-color: ${Theme.colors.primary};
     padding: 7px 15px;
-
     color: ${Theme.colors.white};
-    font-family: Poppins, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.6px;
-
     &:focus-visible {
         outline: 1.5px solid ${Theme.colors.border};
     }
 `;
 
 export const S = {
-    Contacts, Form, Field
-}
+    Contacts, Form, Field}

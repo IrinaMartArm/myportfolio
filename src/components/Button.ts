@@ -5,12 +5,15 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: ${Theme.colors.accent};
-  transition: 0.2s ease-in;
+  transition: ${Theme.animations.transition};
 
   &:hover {
     color: ${Theme.colors.white};
     transform: scale(1.01);
   }
-`;
+  &:active {
+    color: ${Theme.colors.primary};
+  }
+`

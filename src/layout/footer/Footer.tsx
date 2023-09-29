@@ -7,21 +7,12 @@ import { S } from "./FooterStyle";
 const socialIconsData = [
   {
     iconId: "in",
-    width: "21px",
-    height: "21px",
-    viewBox: "0 0 21px 21px",
   },
   {
     iconId: "gt",
-    width: "35px",
-    height: "35px",
-    viewBox: "0 0 35px 35px",
   },
   {
     iconId: "telegram",
-    width: "21px",
-    height: "21px",
-    viewBox: "0 0 21px 21px",
   },
 ];
 
@@ -37,9 +28,9 @@ export const Footer: React.FC = () => {
                 <S.SocialLink>
                   <Icon
                     iconId={i.iconId}
-                    width={i.width}
-                    height={i.height}
-                    viewBox={i.viewBox}
+                    width="35px"
+                    height="35px"
+                    viewBox={'0 0 35px 35px'}
                   />
                 </S.SocialLink>
               </S.SocialItem>

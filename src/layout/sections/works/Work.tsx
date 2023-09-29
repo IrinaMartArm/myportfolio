@@ -1,5 +1,6 @@
 import React from "react";
 import { S } from "./WorksStyles";
+import { Button } from "./../../../components/Button";
 
 type WorkPropsType = {
     image: string
@@ -11,11 +12,13 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
     return (  
         <S.Work>
             <S.ImgBox>
-                <S.Image src={props.image}/>
+                <S.Image src={props.image} alt="work"/>
             </S.ImgBox>
             <S.Box>
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
+                <S.Button>Demo</S.Button>
+                <S.Button>Code</S.Button>
             </S.Box>            
         </S.Work>
     );

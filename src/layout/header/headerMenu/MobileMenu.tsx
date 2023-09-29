@@ -10,7 +10,7 @@ export const MobileMenu: React.FC = () => {
 
   return (
     <S.MobileMenu>
-      <S.Button isOpen={menuIsOpen} onClick={onBtnClick}>
+      <S.Button isOpen={menuIsOpen} onClick={onBtnClick} aria-label="button">
         <span></span>
       </S.Button>
       <S.MenuWrapper isOpen={menuIsOpen}>

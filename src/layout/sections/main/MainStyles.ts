@@ -32,7 +32,7 @@ const MainTitle = styled.h1`
             position: absolute;
             width: 90%;
             height: 7px;
-            left: 50px;
+            /* left: 30px; */
             bottom: 10px;
             z-index: -1;
             background-color: ${Theme.colors.accent}
@@ -50,6 +50,7 @@ const Text =styled.p`
 
 const Photo = styled.img`
     width: 330px;
+    height: 440px;
     object-fit: cover;
     margin-right: 25px;
 

@@ -11,10 +11,11 @@ const Mask = styled.span`
     position: absolute;
     top: 0;
     left: 0;
-    color: #a0b05d;
+    color: ${Theme.colors.accent};
     display: inline-block;
     height: 50%;
     overflow: hidden;
+    transition: ${Theme.animations.transition};
 
     & + & {
         top: 50%;
@@ -44,6 +45,7 @@ const NavLinks = styled(Link)`
         right: -10px;
         z-index: 2;
         transform: scale(0);
+        transition: ${Theme.animations.transition};
     }
     &:hover, &.active {
         &::before {
@@ -61,6 +63,7 @@ const NavLinks = styled(Link)`
 `;
 
 
+
 const DesktopMenu = styled.nav`
     ul {
         display: flex;
@@ -68,6 +71,9 @@ const DesktopMenu = styled.nav`
         justify-content: center;
     }
 `;
+
+
+
 const MobileMenu = styled.nav``;
 const MenuWrapper = styled.div<{ isOpen: boolean }>`
     position: fixed;
@@ -77,14 +83,16 @@ const MenuWrapper = styled.div<{ isOpen: boolean }>`
     left: 0;
     z-index: 999;
     background-color: rgba(31, 31, 32, 0.9);
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: .5s ease-in;
 
     ${(props) =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            transform: translateY(0);
         `}
 
     ul {

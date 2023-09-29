@@ -7,17 +7,17 @@ const items = [
     href: "home",
   },
   {
+    title: "Skills",
+    href: "skills",
+  },
+  {
     title: "Works",
     href: "works",
   },
   {
     title: "Contacts",
     href: "contact",
-  },
-  {
-    title: "Skills",
-    href: "skills",
-  },
+  } 
 ];
 
 export const Menu: React.FC = () => {

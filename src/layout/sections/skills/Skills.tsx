@@ -4,6 +4,7 @@ import { Title } from "../../../components/Title";
 import { Wrapper } from "../../../components/Wrapper";
 import { Skill } from "./Skill";
 import { Container } from "../../../components/Container";
+import { Fade } from "react-awesome-reveal";
 
 const skillsData = [
   { iconId: "figma", title: "Figma" },
@@ -26,11 +27,13 @@ export const Skills: React.FC = () => {
       <Container>
         <Title>My Skills</Title>
         <Wrapper wrap="wrap" gap="30px" justify="space-between">
-          {skillsData.map((skill, index) => {
-            return (
-              <Skill key={index} iconId={skill.iconId} title={skill.title} />
-            );
-          })}
+          <Fade cascade={true} damping={0.1}>
+            {skillsData.map((skill, index) => {
+              return (
+                <Skill key={index} iconId={skill.iconId} title={skill.title} />
+              );
+            })}
+          </Fade>          
         </Wrapper>
       </Container>
     </S.Skills>

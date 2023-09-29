@@ -45,10 +45,11 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     }
 
-    input:focus, input:active,
+    input:focus, input:active, 
     button:focus, button:active {
         outline: none;
     }
+
 
     section {
         padding: 100px 0;
