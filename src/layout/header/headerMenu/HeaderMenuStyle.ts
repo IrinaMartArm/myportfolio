@@ -28,7 +28,7 @@ const Mask = styled.span`
 
 const NavLinks = styled(Link)`
     text-align: center;
-    font-family: Kalam;
+    font-family: Kalam,serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 1.2;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { S } from "./Header_styles";
 import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
@@ -13,9 +13,9 @@ export const Header: React.FC = () => {
   const breakpoint = 768;
 
   React.useEffect(() => {
-    const handleWindowresize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowresize);
-    return () => window.removeEventListener("resize", handleWindowresize);
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
   return (
