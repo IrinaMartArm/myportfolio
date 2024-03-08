@@ -17,7 +17,6 @@ const SocialItem = styled.li``;
 
 const SocialLink = styled.a`
   border-radius: 50%;
-  /* background-color: ${Theme.colors.accent}; */
   background-color: rgba(255, 255, 255, 0.1);
   width: 35px;
   height: 35px;
@@ -26,6 +25,10 @@ const SocialLink = styled.a`
   align-items: center;
   color: ${Theme.colors.accent};
   transition: ${Theme.animations.transition};
+
+    a:visited {
+        color: ${Theme.colors.accent};
+    }
 
   &:hover {
     color: ${Theme.colors.white};

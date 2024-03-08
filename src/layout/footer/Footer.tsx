@@ -7,12 +7,15 @@ import { S } from "./FooterStyle";
 const socialIconsData = [
   {
     iconId: "in",
+    href: "https://www.linkedin.com/in/irina-martoyan/"
   },
   {
     iconId: "gt",
+    href: "https://github.com/IrinaMartArm"
   },
   {
     iconId: "telegram",
+    href: "https://t.me/oskar7070"
   },
 ];
 
@@ -25,7 +28,7 @@ export const Footer: React.FC = () => {
           {socialIconsData.map((i, index) => {
             return (
               <S.SocialItem key={index}>
-                <S.SocialLink>
+                <S.SocialLink href={i.href}>
                   <Icon
                     iconId={i.iconId}
                     width="35px"

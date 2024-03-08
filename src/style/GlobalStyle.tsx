@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     a, a:link, a:visited  {
         text-decoration: none;
         cursor: pointer;
-        color: ${Theme.colors.white};
+        //color: ${Theme.colors.white};
     }
 
     a:hover  {

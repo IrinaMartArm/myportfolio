@@ -46,6 +46,8 @@ const MainTitle = styled.h1`
 
 const Text =styled.p`
     ${font({weight: 700, fmax: 20, fmin: 16})};
+    max-width: 400px;
+    overflow: hidden;
 ` 
 
 const Photo = styled.img`
