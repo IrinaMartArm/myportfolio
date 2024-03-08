@@ -1,11 +1,11 @@
 import React from "react";
 import { S } from "./WorksStyles";
-import { Button } from "./../../../components/Button";
 
 type WorkPropsType = {
     image: string
     title: string
     text: string
+    href: string
 }
 
 export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
@@ -17,8 +17,8 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
             <S.Box>
                 <S.Title>{props.title}</S.Title>
                 <S.Text>{props.text}</S.Text>
-                <S.Button>Demo</S.Button>
-                <S.Button>Code</S.Button>
+                <S.Button href={props.href}>Demo</S.Button>
+                {/*<S.Button>Code</S.Button>*/}
             </S.Box>            
         </S.Work>
     );

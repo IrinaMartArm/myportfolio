@@ -63,6 +63,7 @@ const Button = styled.a`
     margin-right: 25px;
     position: relative;
     z-index: 2;
+    color: ${Theme.colors.white};
     
 
     &::before {
@@ -112,7 +113,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    color: ${Theme.colors.accent};
+    color: ${Theme.colors.white};
 `;
 
 const Link = styled.a<{active: boolean}>`

@@ -4,6 +4,9 @@ import { Title } from "../../../components/Title";
 import { Wrapper } from "../../../components/Wrapper";
 import { Menu } from "./Menu";
 import { Work } from "./Work";
+import todo from "../../../assets/images/pictures/todo.png"
+import quiz from "../../../assets/images/pictures/quiz.png"
+import sarmed from "./../../../assets/images/pictures/sarmed.png"
 import network from "./../../../assets/images/pictures/4575 1.png";
 import { Container } from "../../../components/Container";
 import { StatusType } from "./Menu";
@@ -34,21 +37,32 @@ const worksData = [
     title: "Social Network",
     image: network,
     type: "spa",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.",
+    href: "",
+    text: "",
   },
   {
     id: 2,
-    title: "Adaptive Landings",
-    image: network,
-    type: "react",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.",
+    title: "QuizUp!",
+    image: quiz,
+    type: "spa",
+    href: "https://quiz-up-chi.vercel.app/?minCardsCount=0&maxCardsCount=61",
+    text: "Learning by creating decks of cards with questions and answers.",
   },
   {
     id: 3,
-    title: "Adaptive Landings",
-    image: network,
-    type: "react",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.",
+    title: "Sarmed",
+    image: sarmed,
+    type: "spa",
+    href: "https://www.sarmed.am/main",
+    text: "Brand representatives website.",
+  },
+  {
+    id: 4,
+    title: "Todo List",
+    image: todo,
+    type: "spa",
+    href: "",
+    text: "Сompiling a list of to-dos and tasks including their priorities.",
   },
 ];
 
@@ -86,7 +100,7 @@ export const Works: React.FC = () => {
                             exit={{ opacity: 0 }}
                             key={w.id}
                             layout>
-                  <Work key={w.id} title={w.title} text={w.text} image={w.image} />
+                  <Work href={w.href} key={w.id} title={w.title} text={w.text} image={w.image} />
                 </motion.div>
               );
             })}
