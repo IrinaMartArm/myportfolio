@@ -7,18 +7,17 @@ import { Container } from "../../../components/Container";
 import { Fade } from "react-awesome-reveal";
 
 const skillsData = [
-  { iconId: "figma", title: "Figma" },
-  { iconId: "css", title: "CSS3" },
-  { iconId: "html", title: "HTML5" },
-  { iconId: "vscode", title: "VScode" },
-  { iconId: "JS", title: "JavaScript" },
-  { iconId: "TS", title: "TypeScript" },
   { iconId: "react", title: "React" },
-  { iconId: "react2", title: "React Native" },
-  { iconId: "sass", title: "Sass" },
   { iconId: "redux", title: "Redux" },
-  { iconId: "git", title: "Git" },
+  { iconId: "TS", title: "TypeScript" },
+  { iconId: "JS", title: "JavaScript" },
+  { iconId: "figma", title: "Figma" },
+  { iconId: "html", title: "HTML5" },
+  { iconId: "css", title: "CSS3" },
+  { iconId: "sass", title: "Sass" },
   { iconId: "styled-components", title: "StyledComponents" },
+  { iconId: "git", title: "Git" },
+  // { iconId: "react2", title: "React Native" },
 ];
 
 export const Skills: React.FC = () => {
